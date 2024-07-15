@@ -37,8 +37,10 @@ public class DashboardToCheckout extends BaseTest {
     //This ViewAction For Nested ScrollView
     private final ViewAction scroll = new NestingAwareScrollAction();
 
+    /*
     @Rule
     public TestRule failFastRule = RuleChain.outerRule(new FailFastRule());
+    */
 
     @Rule
     public ActivityScenarioRule<SplashActivity> activityRule = new ActivityScenarioRule<>(SplashActivity.class);
@@ -200,6 +202,7 @@ public class DashboardToCheckout extends BaseTest {
     @Test
     public void testThatCrashes() {
         // Simulate a test crash by throwing a RuntimeException
+        system.exit(1);
         throw new RuntimeException("Deliberate crash for testing purposes.");
     }
     
