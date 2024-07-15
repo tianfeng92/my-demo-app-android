@@ -28,6 +28,7 @@ import org.junit.rules.TestRule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.FixMethodOrder;
+import org.junit.runners.MethodSorters;
 
 import static org.junit.Assert.*;
 
