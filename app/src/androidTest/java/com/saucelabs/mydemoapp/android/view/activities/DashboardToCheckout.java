@@ -202,7 +202,7 @@ public class DashboardToCheckout extends BaseTest {
     @Test
     public void testThatCrashes() {
         // Simulate a test crash by throwing a RuntimeException
-        system.exit(1);
+        System.exit(1);
         throw new RuntimeException("Deliberate crash for testing purposes.");
     }
     
