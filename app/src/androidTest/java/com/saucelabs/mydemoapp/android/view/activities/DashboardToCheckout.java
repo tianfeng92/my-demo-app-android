@@ -19,6 +19,7 @@ import com.saucelabs.mydemoapp.android.BaseTest;
 import com.saucelabs.mydemoapp.android.HappyFlow;
 import com.saucelabs.mydemoapp.android.R;
 import com.saucelabs.mydemoapp.android.actions.NestingAwareScrollAction;
+import com.saucelabs.mydemoapp.android.view.activities.FailFastRule;
 
 import org.junit.Before;
 import org.junit.Rule;
@@ -37,10 +38,10 @@ public class DashboardToCheckout extends BaseTest {
     private final ViewAction scroll = new NestingAwareScrollAction();
 
     @Rule
-    public ActivityScenarioRule<SplashActivity> activityRule = new ActivityScenarioRule<>(SplashActivity.class);
+    public TestRule failFastRule = RuleChain.outerRule(new FailFastRule());
 
     @Rule
-    public TestRule failFastRule = RuleChain.outerRule(new FailFastRule());
+    public ActivityScenarioRule<SplashActivity> activityRule = new ActivityScenarioRule<>(SplashActivity.class);
 
     @Before
     public void setUp(){
