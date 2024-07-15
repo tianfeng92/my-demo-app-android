@@ -8,6 +8,6 @@ public class FailFastRule extends TestWatcher {
     protected void failed(Throwable e, Description description) {
         super.failed(e, description);
         // Fail fast by throwing a RuntimeException
-        throw new RuntimeException("Test failed, stopping further test execution.");
+				System.exit(1);
     }
 }
