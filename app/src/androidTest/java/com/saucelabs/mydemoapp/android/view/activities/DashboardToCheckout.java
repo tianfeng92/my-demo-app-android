@@ -23,6 +23,7 @@ import com.saucelabs.mydemoapp.android.actions.NestingAwareScrollAction;
 import org.junit.Before;
 import org.junit.Rule;
 import org.junit.rules.RuleChain;
+import org.junit.rules.TestRule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
