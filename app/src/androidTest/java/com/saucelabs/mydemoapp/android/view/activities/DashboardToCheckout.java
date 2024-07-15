@@ -25,6 +25,8 @@ import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
+import static org.junit.Assert.*;
+
 @LargeTest
 @RunWith(AndroidJUnit4.class)
 public class DashboardToCheckout extends BaseTest {
@@ -183,5 +185,21 @@ public class DashboardToCheckout extends BaseTest {
         // Assert we are back to main page
         onView(withId(R.id.productRV))
                 .check(matches(isDisplayed()));
+    }
+
+    @Test
+    public void testThatCrashes() {
+        // Simulate a test crash by throwing a RuntimeException
+        throw new RuntimeException("Deliberate crash for testing purposes.");
+    }
+
+    @Test
+    public void testExample1() {
+        assertEquals(4, 2 + 2);
+    }
+
+    @Test
+    public void testExample2() {
+        assertEquals(4, 2 + 2);
     }
 }
