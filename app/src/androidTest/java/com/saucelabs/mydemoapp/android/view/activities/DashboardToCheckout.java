@@ -186,20 +186,19 @@ public class DashboardToCheckout extends BaseTest {
         onView(withId(R.id.productRV))
                 .check(matches(isDisplayed()));
     }
-
-    @Test
-    public void testThatCrashes() {
-        // Simulate a test crash by throwing a RuntimeException
-        throw new RuntimeException("Deliberate crash for testing purposes.");
-    }
-
     @Test
     public void testExample1() {
         assertEquals(4, 2 + 2);
     }
 
     @Test
+    public void testThatCrashes() {
+        // Simulate a test crash by throwing a RuntimeException
+        throw new RuntimeException("Deliberate crash for testing purposes.");
+    }
+    
+    @Test
     public void testExample2() {
-        assertEquals(4, 2 + 2);
+        assertEquals(5, 2 + 2);
     }
 }
