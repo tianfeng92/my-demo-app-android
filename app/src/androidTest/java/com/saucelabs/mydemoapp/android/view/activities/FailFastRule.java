@@ -9,6 +9,7 @@ public class FailFastRule extends TestWatcher {
     @Override
     protected void starting(Description description) {
         if (hasFailed) {
+						System.exit(1);
             throw new RuntimeException("Skipping test due to previous failure.");
         }
     }
