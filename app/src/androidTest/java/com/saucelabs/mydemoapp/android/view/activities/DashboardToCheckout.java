@@ -22,6 +22,7 @@ import com.saucelabs.mydemoapp.android.actions.NestingAwareScrollAction;
 
 import org.junit.Before;
 import org.junit.Rule;
+import org.junit.rules.RuleChain;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
@@ -36,6 +37,9 @@ public class DashboardToCheckout extends BaseTest {
 
     @Rule
     public ActivityScenarioRule<SplashActivity> activityRule = new ActivityScenarioRule<>(SplashActivity.class);
+
+    @Rule
+    public TestRule failFastRule = RuleChain.outerRule(new FailFastRule());
 
     @Before
     public void setUp(){
